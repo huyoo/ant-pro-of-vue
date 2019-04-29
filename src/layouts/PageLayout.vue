@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div>head</div>
-    <div class="content">
+    <div class="content" style="display: inline-block">
       <span>content</span>
       <router-view/>
     </div>
@@ -10,7 +9,8 @@
 
 <script>
   export default {
-    name: "PageLayout"
+    name: "PageLayout",
+    components:{}
   }
 </script>
 
