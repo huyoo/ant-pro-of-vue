@@ -24,10 +24,13 @@
 
 <style scoped>
   .page-header{
+    position: relative;
+    z-index: 2;
     height: 64px;
     line-height: 64px;
     font-size: 20px;
     background-color: white;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
   }
   .page-header .menu-fold{
     padding: 22px 24px;

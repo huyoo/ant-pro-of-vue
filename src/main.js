@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import "@/components/component_use"
+import "@/components/component_regist"
 
 Vue.config.productionTip = false
 

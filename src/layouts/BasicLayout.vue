@@ -6,19 +6,20 @@
     <div class="content">
       <page-header/>
       <router-view/>
+      <page-footer/>
     </div>
   </div>
 </template>
 
 <script>
-	import SideMenu from "@/components/menu/SideMenu";
-	import PageHeader from "@/components/pageHeader/PageHeader";
+	import {SideMenu, PageHeader,PageFooter } from "@/components";
 
 	export default {
 		name: "BasicLayout",
     components:{
 			SideMenu,
-	    PageHeader
+	    PageHeader,
+	    PageFooter
     }
 	}
 </script>
