@@ -22,7 +22,7 @@
 	}
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .page-header{
     position: relative;
     z-index: 2;
@@ -31,13 +31,13 @@
     font-size: 20px;
     background-color: white;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
-  }
-  .page-header .menu-fold{
-    padding: 22px 24px;
-  }
-  .page-header .tool-bar{
-    float: right;
-    padding: 0 24px;
-    font-size: 16px;
+    .menu-fold{
+      padding: 22px 24px;
+    }
+    .tool-bar{
+      float: right;
+      padding: 0 24px;
+      font-size: 16px;
+    }
   }
 </style>

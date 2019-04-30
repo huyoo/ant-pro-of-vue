@@ -24,25 +24,25 @@
 	}
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .basic-layout{
     display: flex;
     flex-flow: row;
-  }
-  .basic-layout .menu{
-    flex: 0 0 256px;
-    min-width: 256px;
-    max-width: 256px;
-    width: 256px;
-    position: relative;
-    z-index: 10;
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
-  }
-  .basic-layout .content{
-    display: flex;
-    flex: auto;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f0f2f5;
+    .menu{
+      flex: 0 0 256px;
+      min-width: 256px;
+      max-width: 256px;
+      width: 256px;
+      position: relative;
+      z-index: 10;
+      box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
+    }
+    .content{
+      display: flex;
+      flex: auto;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f0f2f5;
+    }
   }
 </style>

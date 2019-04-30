@@ -1,7 +1,8 @@
 <template>
   <div class="pro-menu">
     <div class="menu-title"><img src="../../assets/logo.svg">123456</div>
-    <a-menu mode="inline" style="width: 256px" theme="dark">
+    <a-menu mode="inline"
+            theme="dark">
       <a-sub-menu>
         <span slot="title"><a-icon type="form"/><span>表单页</span></span>
         <a-menu-item key="1">
@@ -30,21 +31,21 @@
 	}
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .pro-menu{
     min-height: 100vh;
     color: rgba(255, 255, 255, 0.65);
     background: #001529;
-  }
-  .pro-menu .menu-title{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    vertical-align: middle;
-  }
-  .pro-menu .menu-title img{
-    width: 20px;
-    height: auto;
-    transform: rotateX(180deg);
+    .menu-title{
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      vertical-align: middle;
+      img {
+        width: 20px;
+        height: auto;
+        transform: rotateX(180deg);
+      }
+    }
   }
 </style>

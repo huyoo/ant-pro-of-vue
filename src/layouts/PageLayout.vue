@@ -23,13 +23,15 @@
   }
 </script>
 
-<style scoped>
-  .page-layout .head{
-    background-color: white;
-    padding: 22px 24px;
-  }
-  .page-layout .content{
-    margin: 22px;
-    background-color: white;
+<style scoped lang="less">
+  .page-layout{
+    .head{
+      background-color: white;
+      padding: 22px 24px;
+    }
+    .content{
+      margin: 22px;
+      background-color: white;
+    }
   }
 </style>
