@@ -11,15 +11,18 @@
     </div>
     <div class="content">
       <router-view/>
+      <page-footer/>
     </div>
-
   </div>
 </template>
 
 <script>
+	import {PageFooter} from "@/components";
   export default {
     name: "PageLayout",
-    components:{}
+    components:{
+	    PageFooter
+    }
   }
 </script>
 

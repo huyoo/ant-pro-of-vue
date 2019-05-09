@@ -5,9 +5,11 @@
 import PageHeader from "./pageHeader/PageHeader"
 import SideMenu from "./menu/SideMenu"
 import PageFooter from "./pageFooter/PageFooter"
+import ExceptionPage from './exceptionPage/ExceptionPage'
 
 export {
 	PageHeader,
 	SideMenu,
-	PageFooter
+	PageFooter,
+	ExceptionPage
 }

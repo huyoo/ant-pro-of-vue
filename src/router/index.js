@@ -4,6 +4,8 @@ import PageLayout from "@/layouts/PageLayout";
 import BasicForm from "@/pages/form/BasicForm";
 import stepForm from "@/pages/form/stepForm";
 import BasicLayout from "@/layouts/BasicLayout";
+import BlankLayout from "@/layouts/BlankLayout";
+import Exception4 from "@/pages/exception/404"
 
 Vue.use(Router);
 
@@ -27,6 +29,21 @@ export default new Router({
 							path: '/form/stepForm',
 							name: 'stepForm',
 							component: stepForm
+						}
+					]
+				}, {
+					path: '/exception',
+					name: 'exception',
+					component: BlankLayout,
+					children: [
+						{
+							path: '/exception/404',
+							name: '404',
+							component: Exception4
+						}, {
+							path: '/exception/403',
+							name: '403',
+							component: Exception4
 						}
 					]
 				}

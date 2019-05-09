@@ -4,15 +4,14 @@
       <side-menu :is-mobile="isMobile" :collapse="collapse"/>
     </div>
     <div class="content">
-      <page-header/>
+      <page-header :is-mobile="isMobile" :collapse="collapse" @changeMenu="this.toggleMenu"/>
       <router-view/>
-      <page-footer/>
     </div>
   </div>
 </template>
 
 <script>
-	import {SideMenu, PageHeader, PageFooter} from "@/components";
+	import {SideMenu, PageHeader} from "@/components";
 
 	export default {
 		name: "BasicLayout",
@@ -29,12 +28,11 @@
 		components: {
 			SideMenu,
 			PageHeader,
-			PageFooter
 		},
 		computed: {},
 		watch: {},
 		methods: {
-			dealClientWdith(){
+			dealClientWidth() {
 				const clientWidth = document.documentElement.clientWidth;
 				if (clientWidth > 1200) {
 					this.isMobile = false;
@@ -42,7 +40,7 @@
 					this.sideMenuStyle = {
 						flex: '0 0 256px',
 					}
-				} else if(clientWidth<=1200 && clientWidth >=576){
+				} else if (clientWidth <= 1200 && clientWidth >= 576) {
 					this.isMobile = false;
 					this.collapse = true;
 					this.sideMenuStyle = {flex: '0 0 80px',}
@@ -51,15 +49,19 @@
 					this.collapse = true;
 					this.sideMenuStyle = {flex: '0 0 80px',}
 				}
-      }
+			},
+			toggleMenu() {
+				this.collapse = !this.collapse;
+				this.sideMenuStyle = {flex: `0 0 ${this.collapse ? '80px' : '256px'}`,}
+			}
 		},
-    created(){
-	    this.dealClientWdith();
-    },
+		created() {
+			this.dealClientWidth();
+		},
 		mounted() {
 			let _this = this;
 			window.onresize = () => {
-				_this.dealClientWdith();
+				_this.dealClientWidth();
 			}
 		}
 	}
@@ -74,6 +76,7 @@
       position: relative;
       z-index: 10;
       box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
+      transition: all .2s;
     }
 
     .content {

@@ -1,6 +1,8 @@
 <template>
   <div class="page-header">
-    <span class="menu-fold"><a-icon :type="menuType"/></span>
+    <span class="menu-fold" @click="clickMenuIcon">
+      <a-icon :type="collapse?'menu-unfold':'menu-fold'"/>
+    </span>
     <div class="tool-bar">
       <span>查找</span>
       <span>文档</span>
@@ -14,27 +16,46 @@
 <script>
 	export default {
 		name: "PageHeader",
-    data(){
+		props: {
+			isMobile: {
+				propTypes: Boolean,
+				required: false,
+				default: false
+			},
+			collapse: {
+				propTypes: Boolean,
+				required: false,
+				default: false
+			}
+		},
+		data() {
 			return {
 				menuType: 'menu-fold'
-      }
-    }
+			}
+		},
+		methods: {
+			clickMenuIcon() {
+				this.$emit("changeMenu");
+			}
+		}
 	}
 </script>
 
 <style scoped lang="less">
-  .page-header{
+  .page-header {
     position: relative;
     z-index: 2;
     height: 64px;
     line-height: 64px;
     font-size: 20px;
     background-color: white;
-    box-shadow: 0 1px 4px rgba(0,21,41,.08);
-    .menu-fold{
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+
+    .menu-fold {
       padding: 22px 24px;
     }
-    .tool-bar{
+
+    .tool-bar {
       float: right;
       padding: 0 24px;
       font-size: 16px;
