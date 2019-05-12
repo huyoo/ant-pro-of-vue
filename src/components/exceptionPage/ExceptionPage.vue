@@ -1,13 +1,14 @@
 <template>
   <div class="exception">
-        <div class="exception-img" :style="this.getImgUrl" :alt="this.type"/>
-    <div class="tips">
-      <h6>{{this.type}}</h6>
-      <h1>{{this.config[type].desc}}</h1>
-      <a-button type="primary">返回首页</a-button>
+    <div class="exception-img">
+      <div :style="this.getImgUrl" :alt="this.type"></div>
     </div>
-
-      <page-footer/>
+    <div class="tips">
+      <h1>{{this.type}}</h1>
+      <h2>{{this.config[type].desc}}</h2>
+      <a-button type="primary" @click="this.goHome">返回首页</a-button>
+    </div>
+    <page-footer/>
   </div>
 </template>
 
@@ -17,11 +18,11 @@
 
 	export default {
 		name: "ExceptionPage",
-    data(){
+		data() {
 			return {
 				config: config
-      }
-    },
+			}
+		},
 		props: {
 			type: {
 				propTypes: String,
@@ -31,40 +32,71 @@
 		components: {
 			PageFooter
 		},
-    computed: {
-			getImgUrl(){
+		computed: {
+			getImgUrl() {
 				return `background-image: url(${config[this.type].img})`
-      }
-    }
+			}
+		},
+		methods: {
+			goHome() {
+				window.location.href = '/#/form/basicForm'
+			}
+		}
 	}
 </script>
 
 <style scoped lang="less">
-.exception{
-  .exception-img {
-    float: left;
-    height: 360px;
-    background: no-repeat 50% 50%;
-    background-size: contain;
-  }
-  .tips{
-    float: left;
-  }
-}
-  @media screen and (max-width: 576px){
+  .exception {
+    display: flex;
+    align-items: center;
+    margin: 24px;
+    min-height: 500px;
+
     .exception-img {
-      width: 100%;
+      min-height: 360px;
+      flex: 0 0 60%;
+
+      div {
+        height: 360px;
+        width: 100%;
+        background: no-repeat 50% 50%;
+        background-size: contain;
+      }
     }
-    .tips{
-      width: 100%;
+
+    .tips {
+      margin-left: 60px;
+
+      h1 {
+        margin-bottom: 24px;
+        color: #434e59;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 72px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        color: rgba(0, 0, 0, .45);
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
   }
-  @media screen and (min-width: 576px){
-    .exception-img {
-      width: 50%;
-    }
-    .tips{
-      width: 50%;
+
+  @media screen and (max-width: 576px) {
+    .exception {
+      display: block;
+      text-align: center;
+
+      .exception-img {
+        width: 70%;
+        margin: auto;
+      }
+
+      .tips {
+        margin-left: 0;
+      }
     }
   }
 </style>
