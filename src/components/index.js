@@ -3,7 +3,7 @@
  * create by hy ON 2019/4/29
  */
 import PageHeader from "./pageHeader/PageHeader"
-import SideMenu from "./menu/SideMenu"
+import SideMenu from "./menu"
 import PageFooter from "./pageFooter/PageFooter"
 import ExceptionPage from './exceptionPage/ExceptionPage'
 
