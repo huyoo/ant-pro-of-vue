@@ -21,6 +21,24 @@ export default [
 			{
 				path: '/form',
 				name: 'form',
+				meta: {title: '仪表盘', icon: 'dashboard'},
+				component: PageLayout,
+				children: [
+					{
+						path: '/form/basicForm',
+						name: 'basicForm',
+						meta: {title: '基础表单'},
+						component: BasicForm
+					}, {
+						path: '/form/stepForm',
+						name: 'stepForm',
+						meta: {title: '分步表单'},
+						component: stepForm
+					}
+				]
+			},{
+				path: '/form',
+				name: 'form',
 				meta: {title: '表单页', icon: 'form'},
 				component: PageLayout,
 				children: [
@@ -54,7 +72,43 @@ export default [
 						component: stepForm
 					}
 				]
-			},{
+			}, {
+				path: '/form',
+				name: 'form',
+				meta: {title: '详情页', icon: 'profile'},
+				component: PageLayout,
+				children: [
+					{
+						path: '/form/basicForm',
+						name: 'basicForm',
+						meta: {title: '基础表单'},
+						component: BasicForm
+					}, {
+						path: '/form/stepForm',
+						name: 'stepForm',
+						meta: {title: '分步表单'},
+						component: stepForm
+					}
+				]
+			}, {
+				path: '/form',
+				name: 'form',
+				meta: {title: '结果页', icon: 'check-circle'},
+				component: PageLayout,
+				children: [
+					{
+						path: '/form/basicForm',
+						name: 'basicForm',
+						meta: {title: '基础表单'},
+						component: BasicForm
+					}, {
+						path: '/form/stepForm',
+						name: 'stepForm',
+						meta: {title: '分步表单'},
+						component: stepForm
+					}
+				]
+			}, {
 				path: '/exception',
 				name: 'exception',
 				component: BlankLayout,
@@ -77,7 +131,43 @@ export default [
 						component: Exception500
 					},
 				]
-			}
+			}, {
+				path: '/form',
+				name: 'form',
+				meta: {title: '个人页', icon: 'user'},
+				component: PageLayout,
+				children: [
+					{
+						path: '/form/basicForm',
+						name: 'basicForm',
+						meta: {title: '基础表单'},
+						component: BasicForm
+					}, {
+						path: '/form/stepForm',
+						name: 'stepForm',
+						meta: {title: '分步表单'},
+						component: stepForm
+					}
+				]
+			},{
+				path: '/form',
+				name: 'form',
+				meta: {title: '组件库', icon: 'tool'},
+				component: PageLayout,
+				children: [
+					{
+						path: '/form/basicForm',
+						name: 'basicForm',
+						meta: {title: '基础表单'},
+						component: BasicForm
+					}, {
+						path: '/form/stepForm',
+						name: 'stepForm',
+						meta: {title: '分步表单'},
+						component: stepForm
+					}
+				]
+			},
 		]
 	}
 ]
