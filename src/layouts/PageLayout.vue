@@ -1,38 +1,65 @@
 <template>
   <div class="page-layout">
     <div class="head">
-      <a-breadcrumb>
-        <a-breadcrumb-item>首页</a-breadcrumb-item>
-        <a-breadcrumb-item>表单页</a-breadcrumb-item>
-        <a-breadcrumb-item>基础表单</a-breadcrumb-item>
-      </a-breadcrumb>
-      <h1>基础表单</h1>
-      <span>表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。</span>
+      <breadcrumb-pro/>
+      <h1 class="title">{{title}}</h1>
+      <span v-if="description">{{description}}</span>
     </div>
     <div class="content">
-      <router-view/>
+      <router-view ref="content"/>
       <page-footer/>
     </div>
   </div>
 </template>
 
 <script>
-	import {PageFooter} from "@/components";
-  export default {
-    name: "PageLayout",
-    components:{
-	    PageFooter
-    }
-  }
+	import {PageFooter, BreadcrumbPro} from "@/components";
+
+	export default {
+		name: "PageLayout",
+		components: {
+			PageFooter,
+			BreadcrumbPro
+		},
+		data() {
+			return {
+				description: null,
+				title: ''
+			}
+		},
+		mounted() {
+			this.getPageMeta();
+		},
+		updated() {
+			this.getPageMeta();
+		},
+		methods: {
+			getPageMeta() {
+				const content = this.$refs.content;
+
+				this.description = content.description || null;
+				this.title = this.$route.meta.title;
+			},
+		}
+	}
 </script>
 
 <style scoped lang="less">
-  .page-layout{
-    .head{
+  .page-layout {
+    .head {
       background-color: white;
       padding: 22px 24px;
     }
-    .content{
+
+    .title {
+      margin-top: 10px;
+      color: rgba(0, 0, 0, .85);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .content {
       margin: 22px;
       background-color: white;
     }

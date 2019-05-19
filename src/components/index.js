@@ -6,10 +6,12 @@ import PageHeader from "./pageHeader/PageHeader"
 import SideMenu from "./menu"
 import PageFooter from "./pageFooter/PageFooter"
 import ExceptionPage from './exceptionPage/ExceptionPage'
+import BreadcrumbPro from './BreadcrumbPro/BreadcrumbPro'
 
 export {
 	PageHeader,
 	SideMenu,
 	PageFooter,
-	ExceptionPage
+	ExceptionPage,
+	BreadcrumbPro
 }

@@ -149,25 +149,12 @@ export default [
 						component: stepForm
 					}
 				]
-			},{
+			},/*{
 				path: '/form',
 				name: 'form',
 				meta: {title: '组件库', icon: 'tool'},
 				component: PageLayout,
-				children: [
-					{
-						path: '/form/basicForm',
-						name: 'basicForm',
-						meta: {title: '基础表单'},
-						component: BasicForm
-					}, {
-						path: '/form/stepForm',
-						name: 'stepForm',
-						meta: {title: '分步表单'},
-						component: stepForm
-					}
-				]
-			},
+			},*/
 		]
 	}
 ]
