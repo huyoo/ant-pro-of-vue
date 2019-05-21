@@ -7,8 +7,8 @@
     </div>
     <div class="content">
       <router-view ref="content"/>
-      <page-footer/>
     </div>
+    <page-footer/>
   </div>
 </template>
 

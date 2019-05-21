@@ -77,6 +77,7 @@
       z-index: 10;
       box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
       transition: all .2s;
+      background: #001529;
     }
 
     .content {

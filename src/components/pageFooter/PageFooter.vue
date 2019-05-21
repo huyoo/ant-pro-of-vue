@@ -23,9 +23,9 @@
 
 <style scoped lang="less">
   .page-footer {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+    /*left: 50%;*/
     width: 300px;
     margin: 0 auto;
     font-size: 14px;
