@@ -4,16 +4,16 @@
     <a-form :form="form" layout="horizontal" @submit="handleSubmit">
       <a-form-item label="标题" :wrapper-col="wrapperCol" :label-col="labelCol">
         <a-input v-decorator="[
-          'name',
-          {rules: [{ required: true, message: '请输入标题' }]}
-        ]"
+'name',
+{rules: [{ required: true, message: '请输入标题' }]}
+]"
                  placeholder="给目标起个名字"/>
       </a-form-item>
       <a-form-item label="起止日期" :wrapper-col="wrapperCol" :label-col="labelCol">
         <a-range-picker style="width: 100%"
                         v-decorator="[
-          'beginDate',
-          { rules: [{ type: 'array', required: true, message: '请选择起止日期' }]}]"/>
+'beginDate',
+{ rules: [{ type: 'array', required: true, message: '请选择起止日期' }]}]"/>
       </a-form-item>
       <a-form-item label="目标描述" :wrapper-col="wrapperCol" :label-col="labelCol">
         <a-textarea rows="4"
@@ -26,17 +26,17 @@
           rows="4"
           placeholder="请输入衡量标准"
           v-decorator="[
-            'standard',
-            {rules: [{ required: true, message: '请输入衡量标准' }]}
-          ]"/>
+'standard',
+{rules: [{ required: true, message: '请输入衡量标准' }]}
+]"/>
       </a-form-item>
       <a-form-item :wrapper-col="wrapperCol" :label-col="labelCol">
-        <span slot="label">客户
-          <span class="tips">(选填)</span>
-          <a-tooltip title="目标的服务对象">
-            <a-icon type="question-circle-o"/>
-          </a-tooltip>
-        </span>
+<span slot="label">客户
+<span class="tips">(选填)</span>
+<a-tooltip title="目标的服务对象">
+<a-icon type="question-circle-o"/>
+</a-tooltip>
+</span>
         <a-input
           placeholder="请描述你服务的客户，内部客户直接 @姓名／工号"
           v-decorator="['client']"/>

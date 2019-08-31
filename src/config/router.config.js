@@ -10,6 +10,10 @@ import BlankLayout from "@/layouts/BlankLayout";
 import Exception404 from "@/pages/exception/404"
 import Exception403 from "@/pages/exception/403"
 import Exception500 from "@/pages/exception/500"
+import TableList from "@/pages/list/TableList";
+import StandardList from "@/pages/list/StandardList";
+import Success from "@/pages/result/Success";
+import Fail from "@/pages/result/Fail";
 
 export default [
 	{
@@ -43,12 +47,12 @@ export default [
 				component: PageLayout,
 				children: [
 					{
-						path: '/form/basicForm',
+						path: '/form/basic-form',
 						name: 'basicForm',
 						meta: {title: '基础表单'},
 						component: BasicForm
 					}, {
-						path: '/form/stepForm',
+						path: '/form/step-form',
 						name: 'stepForm',
 						meta: {title: '分步表单'},
 						component: stepForm
@@ -61,15 +65,15 @@ export default [
 				component: PageLayout,
 				children: [
 					{
-						path: '/form/basicForm',
-						name: 'basicForm',
-						meta: {title: '基础表单'},
-						component: BasicForm
+						path: '/table/table-list',
+						name: 'TableList',
+						meta: {title: '查询表格'},
+						component: TableList
 					}, {
-						path: '/form/stepForm',
-						name: 'stepForm',
-						meta: {title: '分步表单'},
-						component: stepForm
+						path: '/table/standard-list',
+						name: 'StandardList',
+						meta: {title: '标准表格'},
+						component: StandardList
 					}
 				]
 			}, {
@@ -91,21 +95,21 @@ export default [
 					}
 				]
 			}, {
-				path: '/form',
-				name: 'form',
+				path: '/result',
+				name: 'result',
 				meta: {title: '结果页', icon: 'check-circle'},
-				component: PageLayout,
+				component: BlankLayout,
 				children: [
 					{
-						path: '/form/basicForm',
-						name: 'basicForm',
-						meta: {title: '基础表单'},
-						component: BasicForm
+						path: '/result/success',
+						name: 'success',
+						meta: {title: '成功页'},
+						component: Success
 					}, {
-						path: '/form/stepForm',
-						name: 'stepForm',
-						meta: {title: '分步表单'},
-						component: stepForm
+						path: '/result/fail',
+						name: 'fail',
+						meta: {title: '失败页'},
+						component: Fail
 					}
 				]
 			}, {

@@ -55,7 +55,7 @@ export default {
 		return (<div class="pro-menu">
 				<div class={`${collapse ? 'center' : ''} menu-title`}>
 					<img src={logo} alt={'Antd'}/>
-					{!collapse && <span>123456</span>}
+					{!collapse && <span>Preview</span>}
 				</div>
 				<Menu mode="inline"
 				      inlineCollapsed={collapse}

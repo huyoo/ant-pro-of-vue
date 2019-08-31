@@ -3,7 +3,7 @@
     <div class="head">
       <breadcrumb-pro/>
       <h1 class="title">{{title}}</h1>
-      <span v-if="description">{{description}}</span>
+      <span v-if="description" class="description">{{description}}</span>
     </div>
     <div class="content">
       <router-view ref="content"/>
@@ -48,15 +48,19 @@
   .page-layout {
     .head {
       background-color: white;
-      padding: 22px 24px;
+      padding: 16px 24px;
     }
 
     .title {
       margin-top: 10px;
       color: rgba(0, 0, 0, .85);
       font-weight: 600;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.4;
+    }
+
+    .description{
+      color: rgba(0,0,0,.65);
     }
 
     .content {

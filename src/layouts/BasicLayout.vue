@@ -17,12 +17,15 @@
 		name: "BasicLayout",
 		data() {
 			return {
-				isSideMenu: true,
-				isMobile: false,
-				collapse: false,
-				sideMenuStyle: {
-					flex: '0 0 256px',
-				}
+				// isSideMenu: true,
+				// isMobile: false,
+				// collapse: false,
+				// sideMenuStyle: {
+				// 	flex: '0 0 256px',
+				// }
+		  isMobile: true,
+		collapse: true,
+		sideMenuStyle:{flex: '0 0 80px'},
 			}
 		},
 		components: {
@@ -56,12 +59,12 @@
 			}
 		},
 		created() {
-			this.dealClientWidth();
+			// this.dealClientWidth();
 		},
 		mounted() {
 			let _this = this;
 			window.onresize = () => {
-				_this.dealClientWidth();
+				// _this.dealClientWidth();
 			}
 		}
 	}

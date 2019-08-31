@@ -16,6 +16,7 @@ import {
 	InputNumber as AInputNumber,
 	Radio as ARadio,
 	Modal,
+	Steps as ASteps,
 	message
 } from 'ant-design-vue'
 
@@ -27,6 +28,10 @@ Vue.use(ACol);
 Vue.use(ACard);
 Vue.use(AForm);
 Vue.use(ADatePicker);
+Vue.use(ASteps);
+const AStep = ASteps;
+Vue.use(AStep);
+
 
 const ARangePicker = ADatePicker.RangePicker;
 Vue.use(ARangePicker);
