@@ -14,12 +14,11 @@
           <a-col v-bind="colLayout">负责人：曲丽丽</a-col>
           <a-col v-bind="colLayout">生效时间：2016-12-12 ~ 2017-12-12</a-col>
         </a-row>
-        <a-steps progressDot current="1">
+        <a-steps progressDot :current="1">
           <a-step>
             <span style="font-size: 14px" slot="title">创建项目</span>
             <template slot="description">
-              <div style="font-size: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;"
-                   slot="description">
+              <div style="font-size: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;" slot="description">
                 <div style="margin: 8px 0 4px">
                   曲丽丽
                   <a-icon style="margin-left: 8px" type="dingding-o"/>

@@ -23,23 +23,23 @@ export default [
 		component: BasicLayout,
 		children: [
 			{
-				path: '/form',
+				path: '/dashboard',
 				name: 'form',
 				meta: {title: '仪表盘', icon: 'dashboard'},
 				component: PageLayout,
-				children: [
-					{
-						path: '/form/basicForm',
-						name: 'basicForm',
-						meta: {title: '基础表单'},
-						component: BasicForm
-					}, {
-						path: '/form/stepForm',
-						name: 'stepForm',
-						meta: {title: '分步表单'},
-						component: stepForm
-					}
-				]
+				// children: [
+				// 	{
+				// 		path: '/form/basicForm',
+				// 		name: 'basicForm',
+				// 		meta: {title: '基础表单'},
+				// 		component: BasicForm
+				// 	}, {
+				// 		path: '/form/stepForm',
+				// 		name: 'stepForm',
+				// 		meta: {title: '分步表单'},
+				// 		component: stepForm
+				// 	}
+				// ]
 			},{
 				path: '/form',
 				name: 'form',
@@ -135,25 +135,27 @@ export default [
 						component: Exception500
 					},
 				]
-			}, {
-				path: '/form',
-				name: 'form',
-				meta: {title: '个人页', icon: 'user'},
-				component: PageLayout,
-				children: [
-					{
-						path: '/form/basicForm',
-						name: 'basicForm',
-						meta: {title: '基础表单'},
-						component: BasicForm
-					}, {
-						path: '/form/stepForm',
-						name: 'stepForm',
-						meta: {title: '分步表单'},
-						component: stepForm
-					}
-				]
-			},/*{
+			},
+			// {
+			// 	path: '/form',
+			// 	name: 'form',
+			// 	meta: {title: '个人页', icon: 'user'},
+			// 	component: PageLayout,
+				// children: [
+				// 	{
+				// 		path: '/form/basicForm',
+				// 		name: 'basicForm',
+				// 		meta: {title: '基础表单'},
+				// 		component: BasicForm
+				// 	}, {
+				// 		path: '/form/stepForm',
+				// 		name: 'stepForm',
+				// 		meta: {title: '分步表单'},
+				// 		component: stepForm
+				// 	}
+				// ]
+			// },
+			/*{
 				path: '/form',
 				name: 'form',
 				meta: {title: '组件库', icon: 'tool'},
