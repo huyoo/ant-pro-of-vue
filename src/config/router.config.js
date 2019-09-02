@@ -14,11 +14,13 @@ import TableList from "@/pages/list/TableList";
 import StandardList from "@/pages/list/StandardList";
 import Success from "@/pages/result/Success";
 import Fail from "@/pages/result/Fail";
+import AdvanceProfile from "@/pages/profile/AdvanceProfile";
+import BasicProfile from "@/pages/profile/BasicProfile";
 
 export default [
 	{
 		path: '/',
-		name: 'index',
+		name: 'ProfileList.vue',
 		meta: {title: '首页'},
 		component: BasicLayout,
 		children: [
@@ -77,21 +79,21 @@ export default [
 					}
 				]
 			}, {
-				path: '/form',
-				name: 'form',
+				path: '/profile',
+				name: 'profile',
 				meta: {title: '详情页', icon: 'profile'},
 				component: PageLayout,
 				children: [
 					{
-						path: '/form/basicForm',
-						name: 'basicForm',
-						meta: {title: '基础表单'},
-						component: BasicForm
+						path: '/profile/basic-profile',
+						name: 'basicProfile',
+						meta: {title: '基础详情页'},
+						component: BasicProfile
 					}, {
-						path: '/form/stepForm',
-						name: 'stepForm',
-						meta: {title: '分步表单'},
-						component: stepForm
+						path: '/profile/advance-profile',
+						name: 'advanceProfile',
+						meta: {title: '高级详情页'},
+						component: AdvanceProfile
 					}
 				]
 			}, {

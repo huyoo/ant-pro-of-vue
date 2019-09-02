@@ -16,7 +16,10 @@ import {
 	InputNumber as AInputNumber,
 	Radio as ARadio,
 	Modal,
+	List as AList,
 	Steps as ASteps,
+	Divider as ADivider,
+	Table as ATable,
 	message
 } from 'ant-design-vue'
 
@@ -31,7 +34,11 @@ Vue.use(ADatePicker);
 Vue.use(ASteps);
 const AStep = ASteps;
 Vue.use(AStep);
-
+Vue.use(AList);
+const AListItem = AList.Item;
+Vue.use(AListItem);
+Vue.use(ADivider);
+Vue.use(ATable);
 
 const ARangePicker = ADatePicker.RangePicker;
 Vue.use(ARangePicker);
