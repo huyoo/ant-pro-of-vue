@@ -20,6 +20,7 @@ import {
 	Steps as ASteps,
 	Divider as ADivider,
 	Table as ATable,
+	Tabs as ATabs,
 	message
 } from 'ant-design-vue'
 
@@ -39,6 +40,9 @@ const AListItem = AList.Item;
 Vue.use(AListItem);
 Vue.use(ADivider);
 Vue.use(ATable);
+Vue.use(ATabs);
+const ATabPane = ATabs.TabPane;
+Vue.use(ATabPane);
 
 const ARangePicker = ADatePicker.RangePicker;
 Vue.use(ARangePicker);

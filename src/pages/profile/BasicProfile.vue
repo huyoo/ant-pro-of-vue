@@ -1,36 +1,38 @@
 <!--基础详情页-->
 <template>
-  <div class="ant-pro-profile">
-    <profile-list title="退款申请">
-      <a-row slot="content">
-        <a-col v-bind="this.colLayout">取货单号：1000000000</a-col>
-        <a-col v-bind="this.colLayout">状态：已取货</a-col>
-        <a-col v-bind="this.colLayout">销售单号：1234123421</a-col>
-        <a-col v-bind="this.colLayout">子订单：3214321432</a-col>
-      </a-row>
-    </profile-list>
+  <page-view>
+    <div class="ant-pro-profile" slot>
+      <profile-list title="退款申请">
+        <a-row slot="content">
+          <a-col v-bind="this.colLayout">取货单号：1000000000</a-col>
+          <a-col v-bind="this.colLayout">状态：已取货</a-col>
+          <a-col v-bind="this.colLayout">销售单号：1234123421</a-col>
+          <a-col v-bind="this.colLayout">子订单：3214321432</a-col>
+        </a-row>
+      </profile-list>
 
-    <a-divider style="margin-bottom: 32px"/>
+      <a-divider style="margin-bottom: 32px"/>
 
-    <profile-list title="用户信息">
-      <a-row slot="content">
-        <a-col v-bind="this.colLayout">用户姓名：付小小</a-col>
-        <a-col v-bind="this.colLayout">联系电话：18100000000</a-col>
-        <a-col v-bind="this.colLayout">常用快递：菜鸟仓储</a-col>
-        <a-col v-bind="this.colLayout">取货地址：浙江省杭州市西湖区万塘路18号</a-col>
-        <a-col v-bind="this.colLayout">备注：无</a-col>
-      </a-row>
-    </profile-list>
+      <profile-list title="用户信息">
+        <a-row slot="content">
+          <a-col v-bind="this.colLayout">用户姓名：付小小</a-col>
+          <a-col v-bind="this.colLayout">联系电话：18100000000</a-col>
+          <a-col v-bind="this.colLayout">常用快递：菜鸟仓储</a-col>
+          <a-col v-bind="this.colLayout">取货地址：浙江省杭州市西湖区万塘路18号</a-col>
+          <a-col v-bind="this.colLayout">备注：无</a-col>
+        </a-row>
+      </profile-list>
 
-    <a-divider style="margin-bottom: 32px"/>
+      <a-divider style="margin-bottom: 32px"/>
 
-    <div class="profile-list-table-title">退货商品</div>
-    <a-table style="margin-bottom: 24px" row-key="id" :columns="goodsColumns" :dataSource="loadGoodsData"></a-table>
+      <div class="profile-list-table-title">退货商品</div>
+      <a-table style="margin-bottom: 24px" row-key="id" :columns="goodsColumns" :dataSource="loadGoodsData"></a-table>
 
-    <div class="profile-list-table-title">退货进度</div>
-    <a-table style="margin-bottom: 24px" row-key="key" :columns="scheduleColumns"
-             :dataSource="loadScheduleData"></a-table>
-  </div>
+      <div class="profile-list-table-title">退货进度</div>
+      <a-table style="margin-bottom: 24px" row-key="key" :columns="scheduleColumns"
+               :dataSource="loadScheduleData"></a-table>
+    </div>
+  </page-view>
 </template>
 
 <script>
@@ -39,10 +41,11 @@
 	import ARow from "ant-design-vue/es/grid/Row";
 	import ACol from "ant-design-vue/es/grid/Col";
 	import ProcessDot from "@/components/ProcessDot/ProcessDot";
+	import PageView from "@/layouts/PageView";
 
 	export default {
 		name: "BasicProfile",
-		components: {ProcessDot, ACol, ARow, AListItem, ProfileList},
+		components: {PageView, ProcessDot, ACol, ARow, AListItem, ProfileList},
 		data() {
 			return {
 				colLayout: {
@@ -198,8 +201,9 @@
   @import "../../common/base";
 
   .ant-pro-profile {
-    padding: 24px;
-
+    padding: 12px;
+    margin: 12px;
+    background-color: white;
     .profile-list {
       .ant-row > div {
         font-size: 14px;

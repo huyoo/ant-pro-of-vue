@@ -20,7 +20,7 @@ import BasicProfile from "@/pages/profile/BasicProfile";
 export default [
 	{
 		path: '/',
-		name: 'ProfileList.vue',
+		name: 'index',
 		meta: {title: '首页'},
 		component: BasicLayout,
 		children: [
@@ -82,7 +82,7 @@ export default [
 				path: '/profile',
 				name: 'profile',
 				meta: {title: '详情页', icon: 'profile'},
-				component: PageLayout,
+				component: BlankLayout,
 				children: [
 					{
 						path: '/profile/basic-profile',
