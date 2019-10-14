@@ -23,19 +23,16 @@ router.beforeEach((to, from, next) => {
         return;
     }
 
-    if (to.path === '/login') {
-        next('/dashboard');
-    } else {
-        // console.log(store);
 
-        if (store.state.permission.addRouters.length === 0) {
-            store.dispatch('GenerateRoutes')
-                .then(() => {
-                    next();
-                    router.addRoutes(asyncRouterMap);
-                })
-        } else {
-            next();
-        }
+    // console.log(store);
+
+    if (store.state.permission.addRouters.length === 0) {
+        store.dispatch('GenerateRoutes')
+            .then(() => {
+                next({path: '/dashboard/analysis'});
+                router.addRoutes(asyncRouterMap);
+            })
+    } else {
+        next();
     }
 });

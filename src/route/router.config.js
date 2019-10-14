@@ -18,6 +18,7 @@ import AdvanceProfile from "@/pages/profile/AdvanceProfile";
 import BasicProfile from "@/pages/profile/BasicProfile";
 import UserCenter from "@/pages/user/center/UserCenter";
 import Login from "@/pages/user/authorization/Login";
+import Dashboard from "@/pages/dashboard/Dashboard";
 
 //所有权限通用路由表
 //如首页和登录页和一些不用权限的公用页面
@@ -28,28 +29,23 @@ export const constantRouterMap = [
 export const asyncRouterMap = [
     {
         path: '/',
-        name: 'index',
+        name: 'Dashboard.vue',
         meta: {title: '首页'},
         component: BasicLayout,
         children: [
             {
                 path: '/dashboard',
-                name: 'form',
+                name: 'dashboard',
                 meta: {title: '仪表盘', icon: 'dashboard'},
                 component: PageLayout,
-                // children: [
-                // 	{
-                // 		path: '/form/basicForm',
-                // 		name: 'basicForm',
-                // 		meta: {title: '基础表单'},
-                // 		component: BasicForm
-                // 	}, {
-                // 		path: '/form/stepForm',
-                // 		name: 'stepForm',
-                // 		meta: {title: '分步表单'},
-                // 		component: stepForm
-                // 	}
-                // ]
+                children: [
+                	{
+                		path: '/dashboard/analysis',
+                		name: 'analysis',
+                		meta: {title: '仪表盘'},
+                		component: Dashboard
+                	}
+                ]
             }, {
                 path: '/form',
                 name: 'form',

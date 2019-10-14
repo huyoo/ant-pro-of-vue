@@ -1,5 +1,5 @@
 <template>
-  <a-table row-key="id" :columns="columns" :dataSource="data"></a-table>
+  <a-table row-key="key" :columns="columns" :dataSource="data"></a-table>
 </template>
 
 <script>

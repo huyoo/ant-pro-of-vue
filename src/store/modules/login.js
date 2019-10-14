@@ -8,13 +8,28 @@ const ACCESS_TOKEN = 'Access-Token';
 
 export default {
 	state: {
-		token: '',
-		name: '',
+		// token: '',
+		// name: '',
 		welcome: '',
-		avatar: '',
+		// avatar: '',
 		roles: [],
 		info: {},
 
+        avatar: "https://gw.alipayobjects.com/zos/rmsportal/jZUIxmJycoymBprLOUbT.png",
+        createTime: 1497160610259,
+        creatorId: "admin",
+        deleted: 0,
+        id: "cdCe4745-4eF7-5C8c-F2cf-89d30FCEB174",
+        lang: "zh-CN",
+        lastLoginIp: "27.154.74.117",
+        lastLoginTime: 1534837621348,
+        name: "Charles Walker",
+        password: "",
+        roleId: "admin",
+        status: 1,
+        telephone: "",
+        token: "4291d7da9005377ec9aec4a71ea837f",
+        username: "admin"
 	},
 	mutations: {
 		SET_TOKEN: (state, token) => {

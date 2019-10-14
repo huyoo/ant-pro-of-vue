@@ -241,7 +241,7 @@
 			loginSuccess(res) {
 				// console.log(res, this);
 
-				this.$router.replace('/dashboard');
+				this.$router.replace('/');
 				// 延迟 1 秒显示欢迎信息
 				setTimeout(() => {
 					this.$notification.success({
