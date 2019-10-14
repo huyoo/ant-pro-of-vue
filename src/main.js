@@ -3,21 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import "@/components/component_regist"
-import Router from 'vue-router'
-import routes from '@/config/router.config'
-
-//路由注册
-Vue.use(Router);
-let router = new Router({
-	routes: routes
-});
+import route from "@/route";
+import store from "@/store/store";
+import "@/route/permission"
+import '@/mock'
 
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
-	el: '#app',
-	router,
-	components: {App},
-	template: '<App/>'
+    el: '#app',
+    store,
+    router: route,
+    components: {App},
+    template: '<App/>'
 });

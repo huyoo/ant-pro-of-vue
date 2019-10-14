@@ -2,7 +2,7 @@
  * create by hy ON 2019/5/12
  */
 import {Icon, Menu} from "ant-design-vue";
-import router from '@/config/router.config'
+import {asyncRouterMap as router} from '@/route/router.config'
 import logo from "../../assets/logo.svg"
 
 const {Item, SubMenu} = Menu;

@@ -21,6 +21,7 @@ import {
 	Divider as ADivider,
 	Table as ATable,
 	Tabs as ATabs,
+	Select as ASelect,
 	message
 } from 'ant-design-vue'
 
@@ -46,6 +47,10 @@ Vue.use(ATabPane);
 
 const ARangePicker = ADatePicker.RangePicker;
 Vue.use(ARangePicker);
+
+Vue.use(ASelect);
+const ASelectOption = ASelect.Option;
+Vue.use(ASelectOption);
 
 const AFormItem = AForm.Item;
 Vue.use(AFormItem);

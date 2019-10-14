@@ -14,24 +14,24 @@
 <!--      <a-sub-menu>-->
 <!--        <span slot="title"><a-icon type="form"/><span>表单页</span></span>-->
 <!--        <a-menu-item key="1">-->
-<!--          <router-link to="/form/basicForm">基础表单</router-link>-->
+<!--          <index-link to="/form/basicForm">基础表单</index-link>-->
 <!--        </a-menu-item>-->
 <!--        <a-menu-item key="2">-->
-<!--          <router-link to="/form/stepForm">分步表单</router-link>-->
+<!--          <index-link to="/form/stepForm">分步表单</index-link>-->
 <!--        </a-menu-item>-->
 <!--      </a-sub-menu>-->
 <!--      <a-sub-menu>-->
 <!--        <span slot="title"><a-icon type="warning"/><span>异常页</span></span>-->
 <!--        <a-menu-item key="3">-->
-<!--          <router-link to="/exception/404">404</router-link>-->
+<!--          <index-link to="/exception/404">404</index-link>-->
 <!--        </a-menu-item>-->
 <!--        <a-menu-item key="4">-->
-<!--          <router-link to="/exception/403">403</router-link>-->
+<!--          <index-link to="/exception/403">403</index-link>-->
 <!--        </a-menu-item>-->
 <!--        <a-sub-menu key="5">-->
 <!--          <span slot="title"><span>asas</span></span>-->
 <!--          <a-menu-item key="51">-->
-<!--            <router-link to="/sasa">asas</router-link>-->
+<!--            <index-link to="/sasa">asas</index-link>-->
 <!--          </a-menu-item>-->
 <!--        </a-sub-menu>-->
 <!--      </a-sub-menu>-->
@@ -41,7 +41,7 @@
 
 <script>
 	import {Menu} from "ant-design-vue";
-	import router from '@/config/router.config'
+	import index from '@/route/router.config'
 	const {Item, SubMenu:ASubMenu} = Menu;
 
 	export default {
