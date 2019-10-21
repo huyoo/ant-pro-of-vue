@@ -8,28 +8,28 @@ const ACCESS_TOKEN = 'Access-Token';
 
 export default {
 	state: {
-		// token: '',
+		token: '',
 		// name: '',
 		welcome: '',
 		// avatar: '',
 		roles: [],
 		info: {},
 
-        avatar: "https://gw.alipayobjects.com/zos/rmsportal/jZUIxmJycoymBprLOUbT.png",
-        createTime: 1497160610259,
-        creatorId: "admin",
-        deleted: 0,
-        id: "cdCe4745-4eF7-5C8c-F2cf-89d30FCEB174",
-        lang: "zh-CN",
-        lastLoginIp: "27.154.74.117",
-        lastLoginTime: 1534837621348,
-        name: "Charles Walker",
-        password: "",
-        roleId: "admin",
-        status: 1,
-        telephone: "",
-        token: "4291d7da9005377ec9aec4a71ea837f",
-        username: "admin"
+        // avatar: "https://gw.alipayobjects.com/zos/rmsportal/jZUIxmJycoymBprLOUbT.png",
+        // createTime: 1497160610259,
+        // creatorId: "admin",
+        // deleted: 0,
+        // id: "cdCe4745-4eF7-5C8c-F2cf-89d30FCEB174",
+        // lang: "zh-CN",
+        // lastLoginIp: "27.154.74.117",
+        // lastLoginTime: 1534837621348,
+        // name: "Charles Walker",
+        // password: "",
+        // roleId: "admin",
+        // status: 1,
+        // telephone: "",
+        // token: "4291d7da9005377ec9aec4a71ea837f",
+        // username: "admin"
 	},
 	mutations: {
 		SET_TOKEN: (state, token) => {
@@ -57,17 +57,25 @@ export default {
 				    console.log(response);
 
 					const result = response.result;
-					Vue.ls.set(ACCESS_TOKEN, result.token, 7 * 24 * 60 * 60 * 1000);
+					Vue.ls.set(ACCESS_TOKEN, result.token, 60 * 60 * 1000);
 
 					commit('SET_TOKEN', result.token);
 					commit('SET_ROLES', result.roleId);
-
+					localStorage.setItem('userInfo', JSON.stringify(response.result))
 					resolve()
 				}).catch(error => {
 					reject(error)
 				})
 			})
 		},
+
+        setInfo({commit}, userInfo){
+		    return new Promise((resolve) => {
+		        commit('SET_TOKEN', userInfo.token);
+                commit('SET_ROLES', userInfo.roleId);
+                resolve();
+            })
+        },
 
 		// 获取用户信息
 		GetInfo({commit}) {

@@ -22,7 +22,7 @@ const login = (options) => {
     'status': 1,
     'telephone': '',
     'lastLoginIp': '27.154.74.117',
-    'lastLoginTime': 1534837621348,
+    'lastLoginTime': new Date().getTime(),
     'creatorId': 'admin',
     'createTime': 1497160610259,
     'deleted': 0,

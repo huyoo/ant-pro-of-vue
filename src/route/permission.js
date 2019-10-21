@@ -4,17 +4,35 @@
  */
 import router from './index'
 import store from '@/store/store'
-import Vue from "vue";
 import {asyncRouterMap} from "@/route/router.config";
-
-const whiteList = ['login', 'register', 'registerResult']; // no redirect whitelist
-const defaultRoutePath = '/dashboard/workplace';
+import {defaultRoutePath} from "@/config";
 
 router.beforeEach((to, from, next) => {
-    // console.log(store);
 
-    //如果没有token 跳转到登录页
+    //store没有token 则校验localStorage是否有刚登陆过的用户，如仍然没有就跳转到登录页
     if (!store.state.login.token) {
+        let userInfo = localStorage.getItem('userInfo');
+
+        if (userInfo) {
+            userInfo = JSON.parse(userInfo);
+
+            if (userInfo.token && userInfo.lastLoginTime) {
+
+                //TODO 根据当前登录用户查询最后登录时间等信息(单点登录)，替换现有不安全的校验方式
+                //最后登录时间不能超过1小时
+                if (new Date().getTime() - userInfo.lastLoginTime < 3600000) {
+                    store.dispatch('setInfo', userInfo).then(() => {
+                        next({path: defaultRoutePath});
+                    });
+                } else {
+                    localStorage.removeItem('userInfo');
+                    next({path: '/login'});
+                }
+
+                return;
+            }
+        }
+
         if (to.path === '/login') {
             next();
         } else {
@@ -23,13 +41,10 @@ router.beforeEach((to, from, next) => {
         return;
     }
 
-
-    // console.log(store);
-
     if (store.state.permission.addRouters.length === 0) {
         store.dispatch('GenerateRoutes')
             .then(() => {
-                next({path: '/dashboard/analysis'});
+                next({path: defaultRoutePath});
                 router.addRoutes(asyncRouterMap);
             })
     } else {
