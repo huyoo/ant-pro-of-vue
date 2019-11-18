@@ -11,6 +11,7 @@
 <script>
     import LogRecord from "@/components/LogRecord/LogRecord";
 
+
     export default {
         name: "ProjectLog",
         components: {LogRecord},
