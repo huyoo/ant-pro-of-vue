@@ -48,14 +48,14 @@
   .page-layout {
     .head {
       background-color: white;
-      padding: 16px 24px;
+      padding: 16px 24px 6px 24px;
     }
 
     .title {
       margin-top: 10px;
       color: rgba(0, 0, 0, .85);
       font-weight: 600;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.4;
     }
 

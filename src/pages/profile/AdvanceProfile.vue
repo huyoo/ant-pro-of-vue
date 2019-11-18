@@ -26,8 +26,9 @@
           <a-step>
             <span style="font-size: 14px" slot="title">创建项目</span>
             <template slot="description">
-              <div style="font-size: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;"
-                   slot="description">
+              <div
+                style="font-size: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;"
+                slot="description">
                 <div style="margin: 8px 0 4px">
                   曲丽丽
                   <a-icon style="margin-left: 8px" type="dingding-o"/>
@@ -39,8 +40,9 @@
           <a-step title="部门初审">
             <span style="font-size: 14px" slot="title">部门初审</span>
             <template slot="description">
-              <div style="fontSize: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;"
-                   slot="description">
+              <div
+                style="fontSize: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;"
+                slot="description">
                 <div style="margin: 8px 0 4px">
                   周毛毛
                   <a-icon style="margin-left: 8px; color: #00A0E9" type="dingding-o"/>
@@ -76,7 +78,7 @@
         </profile-list>
 
         <div style="margin-bottom: 12px">信息组</div>
-        <a-card title="多层信息组"  :headStyle="{backgroundColor: '#fafafa'}">
+        <a-card title="多层信息组" :headStyle="{backgroundColor: '#fafafa'}">
           <profile-list title="组名称">
             <a-row slot="content">
               <a-col v-bind="this.colLayout">负责人：林东东</a-col>
@@ -106,7 +108,12 @@
         </a-card>
       </a-card>
 
-      <a-card title="用户近半年来电记录" style="margin-top: 24px"></a-card>
+      <a-card title="用户近半年来电记录" style="margin-top: 24px">
+        <div class="no-data">
+          <a-icon type="frown-o"/>
+          暂无数据
+        </div>
+      </a-card>
 
       <div style="margin-top: 24px">
         <advance-profile-tabs/>
@@ -116,20 +123,20 @@
 </template>
 
 <script>
-	import PageView from "@/layouts/PageView";
-	import BreadcrumbPro from "@/components/BreadcrumbPro/BreadcrumbPro";
-	import ProfileList from "@/components/ProfileList/ProfileList";
-  import AdvanceProfileTabs from "@/pages/profile/AdvanceTable/AdvanceProfileTabs";
+    import PageView from "@/layouts/PageView";
+    import BreadcrumbPro from "@/components/BreadcrumbPro/BreadcrumbPro";
+    import ProfileList from "@/components/ProfileList/ProfileList";
+    import AdvanceProfileTabs from "@/pages/profile/AdvanceTable/AdvanceProfileTabs";
 
-	export default {
-		name: "AdvanceProfile",
-		components: {AdvanceProfileTabs, ProfileList, BreadcrumbPro, PageView},
-		data() {
-			return {
-				colLayout: {span: 12}
-			}
-		}
-	}
+    export default {
+        name: "AdvanceProfile",
+        components: {AdvanceProfileTabs, ProfileList, BreadcrumbPro, PageView},
+        data() {
+            return {
+                colLayout: {span: 12}
+            }
+        }
+    }
 </script>
 
 <style scoped lang="less">

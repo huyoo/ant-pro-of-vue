@@ -78,7 +78,7 @@ export const asyncRouterMap = [
                     }, {
                         path: '/table/standard-list',
                         name: 'StandardList',
-                        meta: {title: '标准表格'},
+                        meta: {title: '标准列表'},
                         component: StandardList
                     }
                 ]
@@ -86,7 +86,7 @@ export const asyncRouterMap = [
                 path: '/profile',
                 name: 'profile',
                 meta: {title: '详情页', icon: 'profile'},
-                component: BlankLayout,
+                component: PageLayout,
                 children: [
                     {
                         path: '/profile/basic-profile',

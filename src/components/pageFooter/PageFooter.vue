@@ -28,6 +28,7 @@
     /*left: 50%;*/
     width: 300px;
     margin: 0 auto;
+    padding-bottom: 30px;
     font-size: 14px;
     text-align: center;
     color: rgba(0, 0, 0, .45);
