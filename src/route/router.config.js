@@ -19,6 +19,7 @@ import BasicProfile from "@/pages/profile/BasicProfile";
 import UserCenter from "@/pages/user/center/UserCenter";
 import Login from "@/pages/user/authorization/Login";
 import Dashboard from "@/pages/dashboard/Dashboard";
+import EventBusParent from "@/pages/feature/eventBus/EventBusParent";
 
 //所有权限通用路由表
 //如首页和登录页和一些不用权限的公用页面
@@ -139,6 +140,19 @@ export const asyncRouterMap = [
                         name: '500',
                         meta: {title: '500'},
                         component: Exception500
+                    },
+                ]
+            },{
+                path: '/feature',
+                name: 'feature',
+                component: BlankLayout,
+                meta: {title: '测试页', icon: 'warning'},
+                children: [
+                    {
+                        path: '/feature/eventBus',
+                        name: 'eventBus',
+                        meta: {title: '事件总线'},
+                        component: EventBusParent
                     },
                 ]
             },
