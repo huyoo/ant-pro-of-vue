@@ -20,6 +20,7 @@ import UserCenter from "@/pages/user/center/UserCenter";
 import Login from "@/pages/user/authorization/Login";
 import Dashboard from "@/pages/dashboard/Dashboard";
 import EventBusParent from "@/pages/feature/eventBus/EventBusParent";
+import ReuseView from "@/pages/feature/reuse/ReuseView";
 
 //所有权限通用路由表
 //如首页和登录页和一些不用权限的公用页面
@@ -145,15 +146,20 @@ export const asyncRouterMap = [
             },{
                 path: '/feature',
                 name: 'feature',
-                component: BlankLayout,
-                meta: {title: '测试页', icon: 'warning'},
+                component: PageLayout,
+                meta: {title: '测试页', icon: 'read'},
                 children: [
                     {
                         path: '/feature/eventBus',
                         name: 'eventBus',
                         meta: {title: '事件总线'},
                         component: EventBusParent
-                    },
+                    },{
+                        path: '/feature/reuseView',
+                        name: 'reuseView',
+                        meta: {title: '组合复用'},
+                        component: ReuseView
+                    }
                 ]
             },
             {

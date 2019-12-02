@@ -22,6 +22,7 @@ import {
 	Table as ATable,
 	Tabs as ATabs,
 	Select as ASelect,
+    Modal as AModal,
 	message
 } from 'ant-design-vue'
 
@@ -61,6 +62,8 @@ Vue.use(ARadio);
 
 const ARadioGroup = ARadio.Group;
 Vue.use(ARadioGroup);
+
+Vue.use(AModal);
 
 Vue.prototype.$confirm = Modal.confirm;
 Vue.prototype.$message = message;

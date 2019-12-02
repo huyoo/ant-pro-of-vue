@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import eventBus from "@/eventBus";
+    import eventBus from "@/pages/feature/eventBus/eventBus";
 
     export default {
         name: "List",
@@ -38,9 +38,9 @@
                     age: ev.target.value
                 });
 
-                console.log(this.config);
+                console.log(this.config.listA);
                 this.config.listA = '0';
-                console.log(this.config);
+                console.log(this.config.listA);
 
                 console.log('以下是function');
                 this.config.propC();

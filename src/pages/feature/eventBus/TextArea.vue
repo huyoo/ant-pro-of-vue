@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import eventBus from "@/eventBus";
+    import eventBus from "@/pages/feature/eventBus/eventBus";
     import {Input} from 'ant-design-vue'
 
     export default {
