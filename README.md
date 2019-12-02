@@ -26,9 +26,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 3. ~~login authority~~
 4. ~~custom event~~
 5. ~~eventBus~~
-6. compose & reuse...
-6. page authority
-7. elementUI
+6. ~~compose & reuse~~
+6. page authority...
+7. elementUI...
 8. demo2.0
 9. vue-cli
 10. SSR
