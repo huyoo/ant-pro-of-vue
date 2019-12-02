@@ -1,6 +1,6 @@
 <template>
   <div>
-    <List :config="this.testConfigProps"></List>
+    <List :config="this.testConfigProps" :propA="testConfigProps.propA"></List>
     <Show/>
     <TextArea/>
   </div>

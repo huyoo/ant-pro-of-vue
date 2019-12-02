@@ -1,8 +1,10 @@
 <template>
   <div>
+    <span @click="modifyProp">修改propA</span>
     <ul v-for="item of list">
       <li :value="item.age" @click.stop.prevent="handleClick">{{item.name}}</li>
     </ul>
+
   </div>
 </template>
 
@@ -15,6 +17,9 @@
             config:{
                 propTypes: Object,
                 required: true
+            },
+            propA: {
+                propTypes: Number
             }
         },
         data(){
@@ -50,6 +55,12 @@
                 this.config.propC.call(this);
                 this.config.propD.call(this);
 
+            },
+            modifyProp(){
+                console.log('before' + this.propA);
+                this.propA = 'modify';
+                console.log('after' + this.propA);
+                console.log('props', this.config);
             }
         }
     }
