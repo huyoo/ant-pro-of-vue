@@ -27,8 +27,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 4. ~~custom event~~
 5. ~~eventBus~~
 6. ~~compose & reuse~~
-6. page authority...
-7. elementUI...
+6. page authority（为引入elementUI，后续版本升级移动至[ant-pro-of-vue-element](https://github.com/huyoo/ant-pro-of-vue-element)，本项目终止维护）
+7. elementUI
 8. demo2.0
 9. vue-cli
 10. SSR
+
